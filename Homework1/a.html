@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+<form>
+<input type="number" id="anum" name="anum" value="1">
+<button type="button" onclick="addnum()">+</button>
+<button type="button" onclick="decrease()">-</button>
+<button type="button" onclick="mutiple()">*</button>
+<button type="button" onclick="divide()">/</button>
+<input type="number" id="bnum" name="bnum" value="1">
+<button type="button" onclick="reset()">C</button>
+<br>
+<p>結果為</p>
+<p id="demo" name="demo"></p>
+</form>
+<script>
+	function addnum(){
+		var a,b;
+		a = parseFloat(document.getElementById("anum").value);
+		b = parseFloat(document.getElementById("bnum").value);
+		
+		document.getElementById("demo").innerHTML = a+b;
+	}
+	
+	function decrease(){
+		var a,b;
+		a = parseFloat(document.getElementById("anum").value);
+		b = parseFloat(document.getElementById("bnum").value);
+		
+		document.getElementById("demo").innerHTML = a-b;
+	}
+	function mutiple(){
+		var a,b;
+		a = parseFloat(document.getElementById("anum").value);
+		b = parseFloat(document.getElementById("bnum").value);
+		
+		document.getElementById("demo").innerHTML = a*b;
+	}
+	function divide(){
+		var a,b;
+		a = parseFloat(document.getElementById("anum").value);
+		b = parseFloat(document.getElementById("bnum").value);
+		
+		document.getElementById("demo").innerHTML = a/b;
+	}
+	function reset(){
+		
+		if(form.anum.value!=1){
+			form.anum.value=1;
+		}
+		if(form.bnum.value!=1){
+			form.bnum.value=1;
+		}
+		document.getElementById("demo").innerHTML = "";
+	}
+</script>
+</body>
+</html>

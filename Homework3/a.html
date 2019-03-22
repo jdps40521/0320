@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>請輸入成績：</p>
+
+<input id="grade" value="0" />
+
+<button onclick="myFunction()">判定</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var grade, voteable;
+  grade = document.getElementById("grade").value;
+  voteable = (grade < 60) ? "沒及格" : "有及格";
+  document.getElementById("demo").innerHTML = voteable ;
+}
+</script>
+
+</body>
+</html>

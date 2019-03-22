@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>	
+</head>
+<body>
+	<canvas id= "picture" width="420" height="180"></canvas>
+	<script>
+		var canvas= document.getElementById("picture");
+		var pen = canvas.getContext("2d");
+		pen.fillRect(0,0,420,180);
+		pen.clearRect(105,45,10,5);
+		var i=10;
+		var time= setInterval(move,50);		
+		function move(){
+			if(i==310){
+				pen.fillRect(0,0,420,180);
+				i=10;
+			}
+			pen.fillRect(0,0,420,180);
+			pen.clearRect(105+i,45,10,5);
+			i=i+10;
+		}
+	</script>
+	
+</body>
+</html>
